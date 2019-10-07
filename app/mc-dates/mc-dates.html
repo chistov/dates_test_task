@@ -1,0 +1,26 @@
+<div class="dates-component">
+  <div class="from-date">
+    <div >с:</div>
+    <md-datepicker
+      md-max-date="$ctrl.valEnd"
+      ng-change="onChangeStart()"
+      ng-model="$ctrl.valStart">
+    </md-datepicker>
+    <hr class="dates-component_delimiter"/>
+    <md-button ng-click="yesterday()" class="btn default">Вчера</md-button>
+    <md-button class="btn default">Сегодня</md-button>
+  </div>
+  <div class="to-date">
+    <div >по:</div>
+    <md-datepicker
+      md-min-date="$ctrl.valStart"
+      ng-change="onChange()"
+      ng-model="$ctrl.valEnd">
+    </md-datepicker>
+    <hr class="dates-component_delimiter"/>
+    <md-button class="btn default">2 недели</md-button>
+    <md-button class="btn default">Месяц</md-button>
+  </div>
+  <div class="dates-component_buttons">
+  </div>
+</div>
